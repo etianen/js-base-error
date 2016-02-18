@@ -23,7 +23,7 @@ class MyCustomError extends BaseError {}
 ```
 
 
-## BaseError API.
+## BaseError API
 
 ### new BaseError()
 
