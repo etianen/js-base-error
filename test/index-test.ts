@@ -2,7 +2,7 @@ import {expect} from "chai";
 import BaseError from "../lib/index";
 
 
-describe("errors", () => {
+describe("base-error", () => {
 
     class TestError extends BaseError {};
 
