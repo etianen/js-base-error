@@ -1,0 +1,42 @@
+{
+  "name": "@etianen/base-error",
+  "version": "0.2.0",
+  "description": "A base error class with stack trace support.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "typings": "typings install",
+    "prebuild": "npm run typings",
+    "build": "tsc",
+    "premocha": "npm run build",
+    "mocha": "mocha --require source-map-support/register",
+    "lint": "find ./lib ./test -name '*.ts' -not -name '*.d.ts' -exec tslint '{}' \\;",
+    "test": "npm run mocha && npm run lint",
+    "prepublish": "npm run build"
+  },
+  "author": "Dave Hall <dave@etianen.com> (http://www.etianen.com/)",
+  "license": "ISC",
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "source-map-support": "^0.4.0",
+    "tslint": "^3.3.0",
+    "typescript": "^1.8.0",
+    "typings": "^0.6.8"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etianen/js-base-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/etianen/js-base-error/issues"
+  },
+  "homepage": "https://github.com/etianen/js-base-error#readme"
+}
