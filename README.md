@@ -25,9 +25,14 @@ class MyCustomError extends BaseError {}
 ```
 
 
-## BaseError API
+## API
 
-### new BaseError()
+### BaseError
+
+A subclassable error.
+
+
+#### new BaseError()
 
 Creates a new `BaseError`.
 
@@ -36,7 +41,7 @@ new BaseError(message?: string): void;
 ```
 
 
-### BaseError.message
+#### BaseError.message
 
 The message used to initialize the error.
 
@@ -45,7 +50,7 @@ BaseError.message: string;
 ```
 
 
-### BaseError.stack
+#### BaseError.stack
 
 The stack trace of the error.
 
@@ -54,7 +59,7 @@ BaseError.stack: string;
 ```
 
 
-### BaseError.toString()
+#### BaseError.toString()
 
 A string representation of the error.
 
