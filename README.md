@@ -9,6 +9,8 @@ A base error class with stack trace support.
 npm install '@etianen/base-error'
 ```
 
+**TypeScript:** To take advantage of typings, be sure to set `moduleResolution` to `"node"` in your `tsconfig.json`.
+
 
 ## Overview
 
@@ -16,7 +18,7 @@ Creating custom error types in Javascript is needlessly difficult.
 
 @etianen/base-error provides a subclassable `BaseError` that can be used in ES6 and Typescript projects.
 
-``` js
+``` ts
 import BaseError from "@etianen/base-error";
 
 class MyCustomError extends BaseError {}
