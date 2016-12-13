@@ -1,14 +1,6 @@
-# Common ignores.
 .DS_Store
 *.log
 /node_modules
-/typings
-*.js.map
-
-# Ignores for NPM.
 /test
+/.nvmrc
 /.travis.yml
-/tsconfig.json
-/tslint.json
-*.ts
-!*.d.ts
