@@ -4,7 +4,7 @@ const BaseError = require("../lib/index")["default"];
 
 describe("BaseError", () => {
 
-    class TestError extends BaseError {};
+    class TestError extends BaseError {}
 
     const testError = new TestError("foo");
 
@@ -24,7 +24,7 @@ describe("BaseError", () => {
     });
 
     it("provides a toString() implementation", () => {
-        expect(testError.toString()).to.equal("Error: foo");
+        expect(testError.toString()).to.equal(`${TestError.name}: foo`);
     });
 
 });
