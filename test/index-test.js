@@ -1,8 +1,13 @@
 const expect = require("chai").expect;
 const BaseError = require("../lib/index")["default"];
+const NamedExportedBaseError = require("../lib/index").BaseError;
 
 
 describe("BaseError", () => {
+
+    it("should equal named exported BaseError", () => {
+       expect(BaseError).to.equal(NamedExportedBaseError);
+    });
 
     class TestError extends BaseError {}
 
