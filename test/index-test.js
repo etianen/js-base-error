@@ -23,8 +23,21 @@ describe("BaseError", () => {
         expect(testError.message).to.equal("foo");
     });
 
-    it("provides a toString() implementation", () => {
+    it("provides a toString() implementation (with constructor name as error name)", () => {
         expect(testError.toString()).to.equal(`${TestError.name}: foo`);
+    });
+
+    it("provides a toString() implementation (with overridden error name)", () => {
+        const ERROR_NAME = 'SpecialError';
+        class TestErrorWithOverriddenErrorName extends BaseError {
+            constructor(message) {
+                super(message);
+                this.name = ERROR_NAME;
+            }
+        }
+        const specialError = new TestErrorWithOverriddenErrorName('foo');
+
+        expect(specialError.toString()).to.equal(`${ERROR_NAME}: foo`);
     });
 
 });
